@@ -166,7 +166,7 @@ svn propset svn:ignore "README.md
 $SVN_IGNORE" "$SVNPATH"
 
 echo "[Info] SVN ignore:" 
-svn propget -R svn:ignore .
+svn propget -R svn:ignore $SVNPATH
 
 echo "[Info] Changing directory to SVN and committing to trunk"
 cd $SVNPATH
