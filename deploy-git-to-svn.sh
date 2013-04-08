@@ -21,6 +21,8 @@ TMPDIR="/tmp"
 CURRENTDIR=`pwd`
 COMMITMSG_FILE='wp-plugin-commit-msg.tmp'
 
+SVN_IGNORE=$(<.svnignore)
+
 # Get the directory in which this shell script is present
 cd $(dirname "${0}") > /dev/null
 SCRIPT_DIR=$(pwd -L)
@@ -160,7 +162,8 @@ git checkout-index -a -f --prefix=$SVNPATH/
 echo "[Info] Ignoring github specific files and deployment script"
 svn propset svn:ignore "README.md
 .git
-.gitignore" "$SVNPATH"
+.gitignore
+$SVN_IGNORE" "$SVNPATH"
 
 echo "[Info] Changing directory to SVN and committing to trunk"
 cd $SVNPATH
