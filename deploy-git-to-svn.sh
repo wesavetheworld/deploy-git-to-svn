@@ -184,7 +184,7 @@ $README_CONVERTOR readme.md readme.txt to-wp
 while read line; do
 	echo "Removing $line"    
     rm $line -r    
-done SVN_IGNORE
+done $SVN_IGNORE
 
 # TODO: Generate .pot files as well
 

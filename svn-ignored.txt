@@ -1,2 +1,2 @@
 This file is in the SVN ignore file (.svnignore) and should therefor be ignored
-when deployed from Git to Subversion (version 0.1.12).
+when deployed from Git to Subversion (version 0.1.13).
