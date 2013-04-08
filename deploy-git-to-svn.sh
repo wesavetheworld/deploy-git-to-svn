@@ -13,10 +13,10 @@
 #       https://github.com/ocean90/svn2git-tools/
 
 # default configurations
-PLUGINSLUG="bulk-delete"
+PLUGINSLUG="deploy-git-to-svn"
 MAINFILE="$PLUGINSLUG.php" # this should be the name of your main php file in the WordPress Plugin
-ASSETS_DIR="assets-wp-repo" # the name of the assets directory that you are using
-SVNUSER="sudar" # your svn username
+ASSETS_DIR="assets-wp" # the name of the assets directory that you are using
+SVNUSER="info@remcotolsma.nl" # your svn username
 TMPDIR="/tmp"
 CURRENTDIR=`pwd`
 COMMITMSG_FILE='wp-plugin-commit-msg.tmp'
@@ -53,7 +53,7 @@ GITPATH="$CURRENTDIR" # this file should be in the base of your git repository
 # svn config
 SVNPATH="$TMPDIR/$PLUGINSLUG" # path to a temp SVN repo. No trailing slash required and don't add trunk.
 SVNPATH_ASSETS="$TMPDIR/$PLUGINSLUG-assets" # path to a temp assets directory.
-SVNURL="http://plugins.svn.wordpress.org/$PLUGINSLUG/" # Remote SVN repo on wordpress.org, with no trailing slash
+SVNURL="https://deploy-git-to-svn.googlecode.com/svn/"
 
 cd $GITPATH
 
