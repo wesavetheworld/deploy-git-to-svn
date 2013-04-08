@@ -4,7 +4,7 @@ Plugin Name: Deploy WordPress plugin from GitHub to Subversion
 Plugin URI: http://remcotolsma.nl/
 Description: Deploy WordPress plugin from GitHub to Subversion.
  
-Version: 0.1.14
+Version: 0.1.15
 Requires at least: 3.0
 
 Author: Remco Tolsma
