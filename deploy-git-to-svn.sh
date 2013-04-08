@@ -21,6 +21,7 @@ TMPDIR="/tmp"
 CURRENTDIR=`pwd`
 COMMITMSG_FILE='wp-plugin-commit-msg.tmp'
 
+# @see http://stackoverflow.com/questions/7427262/read-a-file-and-save-it-in-variable-using-shell-script
 SVN_IGNORE=$(<.svnignore)
 
 # Get the directory in which this shell script is present
@@ -178,6 +179,12 @@ fi
 
 # Convert markdown in readme.txt file to github markdown format
 $README_CONVERTOR readme.md readme.txt to-wp
+
+# Remove ignored files
+while read line; do
+	echo "Removing $line"    
+    rm $line -r    
+done SVN_IGNORE
 
 # TODO: Generate .pot files as well
 
