@@ -180,12 +180,6 @@ fi
 # Convert markdown in readme.txt file to github markdown format
 $README_CONVERTOR readme.md readme.txt to-wp
 
-# Remove ignored files
-while read line; do
-	echo "Removing $line"    
-    rm $line -r    
-done $SVN_IGNORE
-
 # TODO: Generate .pot files as well
 
 # Add all new files that are not set to be ignored
